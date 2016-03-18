@@ -4,6 +4,7 @@ import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flu
 import TabView from './Components/TabView';
 import TabIcon from './Components/TabIcon';
 import Home from './Components/Home';
+import Login from './Components/Login';
 
 export default class App extends  Component{
   render() {
@@ -14,6 +15,7 @@ export default class App extends  Component{
         <Schema name="withoutAnimation"/>
         <Schema name="tab" type="switch" icon={TabIcon} />
 
+        <Route name="login" component={Login} title="Login" type="replace"/>
         <Route name="home" component={Home} title="Home" type="replace"/>
         <Route name="tabbar">
           <Router footer={TabBar} hideNavBar={true} tabBarStyle={{borderTopColor:'#00bb00',borderTopWidth:1,backgroundColor:'white'}}>
